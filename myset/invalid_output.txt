@@ -1,0 +1,62 @@
+Please enter a command:
+Command received:
+read_set SETG, 3, 6, 5, 4, 4, -1
+Undefined set name
+Please enter a command:
+Command received:
+read_set setA, 3, 6, 5, 4, 4, -1
+Undefined set name
+Please enter a command:
+Command received:
+do_it SETA, SETB, SETC
+Undefined command name
+Please enter a command:
+Command received:
+UNION_set SETA, SETB, SETC
+Undefined command name
+Please enter a command:
+Command received:
+read_set SETB, 45, 567, 34, -1
+Invalid set member - value out of range
+Please enter a command:
+Command received:
+read_set SETA, 45, 56, 45, 34
+List of set members is not terminated correctly
+Please enter a command:
+Command received:
+read_set SETA, 45 ,-3, 2, 45, 34, -1
+Invalid set member - value out of range
+Please enter a command:
+Command received:
+read_set SETA, 45, 2, xyz, 34, -1
+Invalid set member - not an integer
+Please enter a command:
+Command received:
+read_set SETA, 45, 2, 24.0, 34, -1
+Invalid set member - not an integer
+Please enter a command:
+Command received:
+union_set SETC, SETA
+Missing parameter
+Please enter a command:
+Command received:
+union_set SETC, SETA, SETB,
+Extraneous text after end of command
+Please enter a command:
+Command received:
+print_set SETC, SETD
+Extraneous text after end of command
+Please enter a command:
+Command received:
+sub_set SETF, , SETD, SETA
+Multiple consecutive commas
+Please enter a command:
+Command received:
+intersect_set SETF SETD  SETA
+Missing comma
+Please enter a command:
+Command received:
+symdiff_set, SETF, SETB, SETA
+Illegal comma
+Please enter a command:
+End of file reached
