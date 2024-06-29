@@ -22,7 +22,7 @@
  * @param num The integer whose digits are to be counted.
  * @return The number of digits in the integer.
  */
-int countDigits(int);
+int countDigits(int num);
 
 /**
  * @brief Parses an integer from a string.
@@ -34,6 +34,6 @@ int countDigits(int);
  * @return The parsed integer, -1 if the string represents "-1",
  *         -2 if the string is not a valid integer or is out of range.
  */
-int parseInt(char *);
+int parseInt(char *str);
 
 #endif /* INTEGER_UTILS_H */
