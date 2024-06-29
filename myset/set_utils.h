@@ -32,7 +32,7 @@ typedef enum {
  * @note This function dynamically allocates memory for the array of elements.
  *       It is the caller's responsibility to free this memory.
  */
-void fillSet(set *, char **, char *, size_t);
+void fillSet(set *A, char **str, char *ptr, size_t len);
 
 /**
  * @brief Parses a set name and returns a pointer to the corresponding set.
@@ -41,7 +41,7 @@ void fillSet(set *, char **, char *, size_t);
  * @param setArr Array of set pointers.
  * @return Pointer to the corresponding set, or NULL if the set name is invalid.
  */
-set *parseSet(char *, set *[]);
+set *parseSet(char *set_name, set *setArr[]);
 
 /**
  * @brief Parses a command string and returns the corresponding operation.
@@ -49,6 +49,6 @@ set *parseSet(char *, set *[]);
  * @param command String representing the command to parse.
  * @return The corresponding operation enum value.
  */
-Operation parseCommand(char *);
+Operation parseCommand(char *command);
 
 #endif /* SET_UTILS_H */
