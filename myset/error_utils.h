@@ -17,7 +17,7 @@
  * @param ptr Temporary pointer used for parsing.
  * @return 1 if the set is readable and correctly formatted, 0 otherwise.
  */
-int isReadableSet(char **, char *);
+int isReadableSet(char **str, char *ptr);
 
 /**
  * @brief Validates the parameters and sets for a given operation.
@@ -29,6 +29,6 @@ int isReadableSet(char **, char *);
  * @param C Pointer to the third set (if applicable).
  * @return 1 if there is an error, 0 otherwise.
  */
-int prompt_err(Operation, char *[], set *, set *, set *);
+int prompt_err(Operation opr, char *ptrArr[], set *A, set *B, set *C);
 
 #endif /* ERROR_UTILS_H */
