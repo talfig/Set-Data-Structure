@@ -27,7 +27,7 @@ typedef struct {
  * @param A Pointer to the set.
  * @return Pointer to the data array of the set.
  */
-unsigned char *getData(set *);
+unsigned char *getData(set *A);
 
 /**
   * @brief Empties a set by setting all its data elements to 0.
@@ -35,7 +35,7 @@ unsigned char *getData(set *);
  * @param A Pointer to the set to be emptied.
  * @note This function modifies the set in place.
  */
-void emptySet(set *);
+void emptySet(set *A);
 
 /**
  * @brief Empties an array of sets by setting all their data elements to 0.
@@ -44,7 +44,7 @@ void emptySet(set *);
  * @param len Length of the set array.
  * @note This function modifies each set in the array in place.
  */
-void emptySetArray(set *[], int);
+void emptySetArray(set *setArr[], int len);
 
 /**
  * @brief Adds a number to a set.
@@ -52,7 +52,7 @@ void emptySetArray(set *[], int);
  * @param A Pointer to the set.
  * @param num Number to be added to the set.
  */
-void addToSet(set *, unsigned char);
+void addToSet(set *A, unsigned char num);
 
 /**
  * @brief Checks if a number is in a set.
@@ -61,7 +61,7 @@ void addToSet(set *, unsigned char);
  * @param num Number to check for membership in the set.
  * @return 1 if the number is in the set, 0 otherwise.
  */
-int isInSet(set *, unsigned char);
+int isInSet(set *A, unsigned char num);
 
 /**
  * @brief Reads an array of numbers into a set.
@@ -71,7 +71,7 @@ int isInSet(set *, unsigned char);
  * @param len Length of the array.
  * @note This function empties the set before adding new numbers.
  */
-void read_set(set *, unsigned char *, int);
+void read_set(set *A, unsigned char *arr, int len);
 
 /**
  * @brief Prints the contents of a set.
@@ -79,7 +79,7 @@ void read_set(set *, unsigned char *, int);
  * @param A Pointer to the set.
  * @note This function prints the set in a specified format.
  */
-void print_set(set *);
+void print_set(set *A);
 
 /**
  * @brief Computes the union of two sets and stores the result in a third set.
@@ -89,7 +89,7 @@ void print_set(set *);
  * @param C Pointer to the set to store the union result.
  * @note This function modifies the result set in place.
  */
-void union_set(set *, set *, set *);
+void union_set(set *A, set *B, set *C);
 
 /**
  * @brief Computes the intersection of two sets and stores the result in a third set.
@@ -99,7 +99,7 @@ void union_set(set *, set *, set *);
  * @param C Pointer to the set to store the intersection result.
  * @note This function modifies the result set in place.
  */
-void intersect_set(set *, set *, set *);
+void intersect_set(set *A, set *B, set *C);
 
 /**
  * @brief Computes the difference of two sets (A \ B) and stores the result in a third set.
@@ -109,7 +109,7 @@ void intersect_set(set *, set *, set *);
  * @param C Pointer to the set to store the difference result.
  * @note This function modifies the result set in place.
  */
-void sub_set(set *, set *, set *);
+void sub_set(set *A, set *B, set *C);
 
 /**
  * @brief Computes the symmetric difference of two sets and stores the result in a third set.
@@ -119,6 +119,6 @@ void sub_set(set *, set *, set *);
  * @param C Pointer to the set to store the symmetric difference result.
  * @note This function modifies the result set in place.
  */
-void symdiff_set(set *, set *, set *);
+void symdiff_set(set *A, set *B, set *C);
 
 #endif /* SET_H */
